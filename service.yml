@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: dturner-test-service
+spec:
+  selector:
+    run: dturner-test
+  ports:
+    - port: 4444
+      targetPort: 80
+      nodePort: 30010
+  type: NodePort
